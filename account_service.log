@@ -1,0 +1,30 @@
+INFO 2020-03-05 11:03:36 n.m.a.AccountSvcApplication.logStarting 55 :Starting AccountSvcApplication on DESKTOP-8GM52RO with PID 15184 (D:\IDEA--ck\customer\account-svc\target\classes started by 23059 in D:\IDEA--ck\customer)
+INFO 2020-03-05 11:03:36 n.m.a.AccountSvcApplication.logStartupProfileInfo 651 :No active profile set, falling back to default profiles: default
+INFO 2020-03-05 11:03:38 o.s.b.w.e.t.TomcatWebServer.initialize 92 :Tomcat initialized with port(s): 9000 (http)
+INFO 2020-03-05 11:03:38 o.a.c.core.StandardService.log 173 :Starting service [Tomcat]
+INFO 2020-03-05 11:03:38 o.a.c.core.StandardEngine.log 173 :Starting Servlet engine: [Apache Tomcat/9.0.31]
+INFO 2020-03-05 11:03:38 o.a.c.c.C.[.[.[/account-svc].log 173 :Initializing Spring embedded WebApplicationContext
+INFO 2020-03-05 11:03:38 o.s.web.context.ContextLoader.prepareWebApplicationContext 284 :Root WebApplicationContext: initialization completed in 1419 ms
+INFO 2020-03-05 11:03:38 o.s.s.c.ThreadPoolTaskExecutor.initialize 181 :Initializing ExecutorService 'applicationTaskExecutor'
+INFO 2020-03-05 11:03:38 o.s.b.w.e.t.TomcatWebServer.start 204 :Tomcat started on port(s): 9000 (http) with context path '/account-svc'
+INFO 2020-03-05 11:03:38 n.m.a.AccountSvcApplication.logStarted 61 :Started AccountSvcApplication in 2.607 seconds (JVM running for 3.914)
+INFO 2020-03-05 11:03:47 o.a.c.c.C.[.[.[/account-svc].log 173 :Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO 2020-03-05 11:03:47 o.s.w.s.DispatcherServlet.initServletBean 525 :Initializing Servlet 'dispatcherServlet'
+INFO 2020-03-05 11:03:47 o.s.w.s.DispatcherServlet.initServletBean 547 :Completed initialization in 6 ms
+INFO 2020-03-05 11:03:48 n.m.a.c.AccountController.CreateAccount 26 :调用账户服务模块的createAccount方法来注册
+DEBUG 2020-03-05 11:03:48 n.m.a.c.AccountController.CreateAccount 27 :23@qq.com
+INFO 2020-03-05 16:09:15 n.m.a.AccountSvcApplication.logStarting 55 :Starting AccountSvcApplication on DESKTOP-8GM52RO with PID 14428 (D:\IDEA--ck\customer\account-svc\target\classes started by 23059 in D:\IDEA--ck\customer)
+INFO 2020-03-05 16:09:15 n.m.a.AccountSvcApplication.logStartupProfileInfo 651 :No active profile set, falling back to default profiles: default
+INFO 2020-03-05 16:09:17 o.s.b.w.e.t.TomcatWebServer.initialize 92 :Tomcat initialized with port(s): 9000 (http)
+INFO 2020-03-05 16:09:17 o.a.c.core.StandardService.log 173 :Starting service [Tomcat]
+INFO 2020-03-05 16:09:17 o.a.c.core.StandardEngine.log 173 :Starting Servlet engine: [Apache Tomcat/9.0.31]
+INFO 2020-03-05 16:09:17 o.a.c.c.C.[.[.[/account-svc].log 173 :Initializing Spring embedded WebApplicationContext
+INFO 2020-03-05 16:09:17 o.s.web.context.ContextLoader.prepareWebApplicationContext 284 :Root WebApplicationContext: initialization completed in 1430 ms
+INFO 2020-03-05 16:09:17 o.s.s.c.ThreadPoolTaskExecutor.initialize 181 :Initializing ExecutorService 'applicationTaskExecutor'
+INFO 2020-03-05 16:09:17 o.s.b.w.e.t.TomcatWebServer.start 204 :Tomcat started on port(s): 9000 (http) with context path '/account-svc'
+INFO 2020-03-05 16:09:17 n.m.a.AccountSvcApplication.logStarted 61 :Started AccountSvcApplication in 2.516 seconds (JVM running for 3.865)
+INFO 2020-03-05 16:10:14 o.a.c.c.C.[.[.[/account-svc].log 173 :Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO 2020-03-05 16:10:14 o.s.w.s.DispatcherServlet.initServletBean 525 :Initializing Servlet 'dispatcherServlet'
+INFO 2020-03-05 16:10:14 o.s.w.s.DispatcherServlet.initServletBean 547 :Completed initialization in 6 ms
+INFO 2020-03-05 16:10:14 c.z.hikari.HikariDataSource.getConnection 110 :HikariPool-1 - Starting...
+INFO 2020-03-05 16:10:15 c.z.hikari.HikariDataSource.getConnection 123 :HikariPool-1 - Start completed.
