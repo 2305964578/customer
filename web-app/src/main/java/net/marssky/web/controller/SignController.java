@@ -1,5 +1,7 @@
 package net.marssky.web.controller;
 
+import net.marssky.account.client.AccountClient;
+import net.marssky.account.dto.CreateAccountRequest;
 import net.marssky.web.dto.Account;
 import net.marssky.web.model.Staff;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -77,5 +79,26 @@ public class SignController {
         List<Staff> list=re.getBody();
         return list;
 
+    }
+
+    @Autowired
+    AccountClient accountClient;
+
+    @RequestMapping("/signup4")
+    @ResponseBody
+    public String signUp4(@RequestParam(value = "name", required = false) String name,
+                         @RequestParam(value = "email") String email,
+                         @RequestParam(value = "password") String password) {
+        System.out.println("有一个acount-api接口的注册注册");
+        CreateAccountRequest createAccountRequest=new CreateAccountRequest();
+        createAccountRequest.setEmail(email);
+        createAccountRequest.setPassword(password);
+        String result=this.accountClient.createAccount(createAccountRequest);
+
+        if ("success".equalsIgnoreCase(result)) {
+            return "ok";
+        }
+
+        return "err";
     }
 }
