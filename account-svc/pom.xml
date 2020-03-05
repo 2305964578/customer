@@ -8,7 +8,7 @@
         <version>1.0.1</version>
     </parent>
     <artifactId>account-svc</artifactId>
-    <name>account-svc</name>
+    <name>customer-account-svc</name>
     <dependencies>
 
 

@@ -1,16 +1,22 @@
 package net.marssky.web.controller;
 
 import net.marssky.web.dto.Account;
+import net.marssky.web.model.Staff;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 
+import java.lang.reflect.Type;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -49,6 +55,8 @@ public class SignController {
         HttpEntity<Account> body=new HttpEntity<>(account);
         String result = restTemplate.postForObject(url,body,String.class);
         System.out.println(account.getEmail());
+
+
         if ("success".equalsIgnoreCase(result)) {
             return "ok";
         }
@@ -56,17 +64,18 @@ public class SignController {
         return "err";
     }
 
-    @RequestMapping("/signup3")
+    @RequestMapping("/get_accounts")
     @ResponseBody
-    public String signUp3() {
-        System.out.println("查询");
+    public List<Staff> getStaffs(Account account) {
+
+        HttpEntity<Account> body=new HttpEntity<>(account);
         RestTemplate restTemplate = restTemplateBuilder.build();
         String url = "http://localhost:9000/account-svc/v1/account/get_accounts";
-        String result = restTemplate.getForObject(url, String.class);
-        if ("success".equalsIgnoreCase(result)) {
-            return "ok";
-        }
 
-        return "err";
+        ParameterizedTypeReference<List<Staff>> typeReference=new ParameterizedTypeReference<List<Staff>>() {};
+        ResponseEntity<List<Staff>> re=restTemplate.exchange(url, HttpMethod.GET,body,typeReference);
+        List<Staff> list=re.getBody();
+        return list;
+
     }
 }
